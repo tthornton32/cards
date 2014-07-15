@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: :show
+
   def index
-  	# @projects = current_user.projects
+  	@projects = current_user.projects
   end
 
   def new
@@ -27,6 +29,10 @@ class ProjectsController < ApplicationController
   def show
   	@project = Project.find(params[:id])
   	@cards = @project.cards
+  end
+
+  def destroy
+
   end
 
   private

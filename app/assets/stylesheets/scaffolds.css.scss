@@ -33,7 +33,18 @@ div {
 
 #notice {
   color: green;
-  margin-left: 1em;
+  padding: .5em 1em;
+  border-bottom: 1px solid green;
+  background-color: #EBFAEB;
+  margin-top: 0px;
+}
+
+#alert {
+  color: #FF9900;
+  padding: .5em 1em;
+  border-bottom: 1px solid #FF9900;
+  background-color: #FFFFD6;
+  margin-top: 0px;
 }
 
 .field_with_errors {
