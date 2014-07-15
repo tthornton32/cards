@@ -1,0 +1,5 @@
+<%= content_tag :h1, best_in_place(@project, :title) %>
+<%= link_to "new card", project_cards_path(@project, card: {title: "???"}), method: :post, remote: true, class: "button" %><br />
+<div id="board" class="board" data-update-url="<%= sort_project_cards_path @project %>">
+	<%= render partial: 'cards/card', collection: @cards %>
+</div>
